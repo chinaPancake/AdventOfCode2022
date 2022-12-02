@@ -29,6 +29,3 @@ print(score)
 # lose 0
 # draw 3
 # win 6
-X = 1
-Y = 2
-Z = 3
