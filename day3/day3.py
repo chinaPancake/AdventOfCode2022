@@ -1,7 +1,6 @@
 file = open("./day3/input_file_day3.txt", "r")
 wynik = 0
 a = 0
-secik = set()
 for i in file:
     secik = set()
     i_first = i[: len(i) // 2]
@@ -19,8 +18,26 @@ for i in file:
                     wynik += ord(letters) - 96
 
                 secik.add(letters)
+# --------- second part
 
-print(wynik)
+
+X = [line for line in open("./day3/input_file_day3.txt")]
+x = 0
+wyniczek = 0
+while x < len(X):
+    for y in X[x]:
+        secik = set()
+        if y in X[x + 1] and y in X[x + 2]:
+            if "a" <= y <= "z":
+                wyniczek += ord(y) - ord("a") + 1
+            else:
+                wyniczek += ord(y) - ord("A") + 1 + 26
+            break
+    x += 3
+print(wyniczek)
+
+
+# print(wynik)
 
 "abc dea"
 "a  aa baa"
