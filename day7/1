@@ -1,0 +1,17 @@
+from anytree import Node 
+f = open('input.txt','r')
+
+#max size of 100000
+#sum of the all directory with maxsize of 100000
+
+
+head = ''
+directory = ['/']
+dict = {
+        '$ cd /':directory.index('/')
+        }
+
+
+for i in f:
+    if i == dict.keys['$ cd /']:
+        print(directory)
