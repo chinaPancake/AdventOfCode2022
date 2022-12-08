@@ -37,6 +37,22 @@ while x < len(X):
 print(wyniczek)
 
 
+X = [line for line in open("./day3/input_file_day3.txt")]
+x = 0
+wyniczek = 0
+while x < len(X):
+    for y in X[x]:
+        secik = set()
+        if y in X[x + 1] and y in X[x + 2]:
+            if "a" <= y <= "z":
+                wyniczek += ord(y) - ord("a") + 1
+            else:
+                wyniczek += ord(y) - ord("A") + 1 + 26
+            break
+    x += 3
+print(wyniczek)
+
+
 # print(wynik)
 
 "abc dea"
